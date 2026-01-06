@@ -28,10 +28,9 @@
     }
 
     header {
-      padding: 90px 20px 70px;
+      padding: 90px 20px 50px;
       text-align: center;
-      background:
-        radial-gradient(circle at top, rgba(56,189,248,.15), transparent 60%);
+      background: radial-gradient(circle at top, rgba(56,189,248,.15), transparent 60%);
     }
 
     .profile-img {
@@ -52,7 +51,7 @@
     header p {
       color: var(--secondary);
       font-size: 1.2rem;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
     }
 
     .links a {
@@ -62,10 +61,25 @@
       font-weight: 500;
     }
 
+    .resume-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      background-color: var(--primary);
+      color: var(--bg);
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+    .resume-btn:hover {
+      background-color: #0ea5e9;
+    }
+
     section {
       max-width: 1150px;
       margin: auto;
-      padding: 70px 20px;
+      padding: 60px 20px;
     }
 
     h2 {
@@ -136,7 +150,6 @@
 
 <header>
   <img src="assets/profile.jpg" alt="Mohamed Badry" class="profile-img">
-
   <h1>Mohamed Badry</h1>
   <p>AI & Data Analyst • Machine Learning • Business Intelligence</p>
 
@@ -145,6 +158,8 @@
     <a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
     <a href="mailto:your@email.com">Email</a>
   </div>
+
+  <a href="resume.pdf" class="resume-btn" download>Download Resume</a>
 </header>
 
 <section>
@@ -177,17 +192,17 @@
     </div>
 
     <div class="card">
-      <img src="assets/projects/sentiment.png" class="project-img">
-      <h3>Stock Market Sentiment Analysis</h3>
+      <img src="assets/projects/predictive-maintenance.png" class="project-img">
+      <h3>Predictive Maintenance – NASA Dataset</h3>
       <p>
-        NLP-based sentiment analysis on financial news using BERT
-        to analyze market sentiment impact.
+        Data science project for time-series failure prediction using
+        sensor data from NASA Turbofan Engine dataset.
       </p>
-      <span class="tag">NLP</span>
-      <span class="tag">BERT</span>
-      <span class="tag">Transformers</span>
+      <span class="tag">Machine Learning</span>
+      <span class="tag">Time Series</span>
+      <span class="tag">Python</span>
       <br><br>
-      <a href="https://github.com/mohamedbadry/stock-sentiment-analysis">View Project →</a>
+      <a href="https://github.com/mohamedbadry/predictive-maintenance">View Project →</a>
     </div>
 
   </div>
@@ -213,13 +228,12 @@
 
     <div class="card">
       <img src="assets/projects/maintenance.png" class="project-img">
-      <h3>Predictive Maintenance – NASA Dataset</h3>
+      <h3>Predictive Maintenance Dashboard</h3>
       <p>
-        Time-series analysis and failure prediction using NASA
-        Turbofan Engine sensor data.
+        Data analysis dashboard for maintenance insights and predictive alerts.
       </p>
-      <span class="tag">Time Series</span>
-      <span class="tag">Prediction</span>
+      <span class="tag">Data Analysis</span>
+      <span class="tag">Dashboard</span>
       <span class="tag">Python</span>
       <br><br>
       <a href="https://github.com/mohamedbadry/predictive-maintenance">View Project →</a>
