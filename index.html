@@ -7,12 +7,12 @@
 
   <style>
     :root {
-      --bg: #0b1120;
-      --card: #111827;
+      --bg: #020617;
+      --card: #020617;
       --primary: #38bdf8;
       --secondary: #94a3b8;
       --text: #e5e7eb;
-      --border: #1f2933;
+      --border: #1f2937;
     }
 
     * {
@@ -28,10 +28,19 @@
     }
 
     header {
-      padding: 100px 20px 80px;
+      padding: 90px 20px 70px;
       text-align: center;
       background:
         radial-gradient(circle at top, rgba(56,189,248,.15), transparent 60%);
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--primary);
+      margin-bottom: 20px;
     }
 
     header h1 {
@@ -47,14 +56,14 @@
     }
 
     .links a {
-      margin: 0 12px;
+      margin: 0 14px;
       color: var(--primary);
       text-decoration: none;
       font-weight: 500;
     }
 
     section {
-      max-width: 1100px;
+      max-width: 1150px;
       margin: auto;
       padding: 70px 20px;
     }
@@ -69,14 +78,14 @@
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
+      gap: 28px;
     }
 
     .card {
       background: linear-gradient(180deg, #020617, #020617);
       border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 28px;
+      border-radius: 20px;
+      padding: 26px;
       transition: all 0.3s ease;
     }
 
@@ -86,8 +95,17 @@
     }
 
     .card h3 {
-      margin-top: 0;
+      margin-top: 12px;
       color: var(--primary);
+    }
+
+    .project-img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      margin-bottom: 15px;
     }
 
     .tag {
@@ -117,8 +135,11 @@
 <body>
 
 <header>
+  <img src="assets/profile.jpg" alt="Mohamed Badry" class="profile-img">
+
   <h1>Mohamed Badry</h1>
   <p>AI & Data Analyst • Machine Learning • Business Intelligence</p>
+
   <div class="links">
     <a href="https://github.com/mohamedbadry">GitHub</a>
     <a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
@@ -138,46 +159,15 @@
 </section>
 
 <section>
-  <h2>Technical Skills</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Data & Analytics</h3>
-      <span class="tag">Python</span>
-      <span class="tag">SQL</span>
-      <span class="tag">Pandas</span>
-      <span class="tag">NumPy</span>
-      <span class="tag">Power BI</span>
-    </div>
-
-    <div class="card">
-      <h3>Machine Learning & AI</h3>
-      <span class="tag">Scikit-learn</span>
-      <span class="tag">Random Forest</span>
-      <span class="tag">NLP</span>
-      <span class="tag">BERT</span>
-      <span class="tag">TensorFlow</span>
-    </div>
-
-    <div class="card">
-      <h3>Tools & Platforms</h3>
-      <span class="tag">Git</span>
-      <span class="tag">GitHub</span>
-      <span class="tag">MLflow</span>
-      <span class="tag">MySQL</span>
-      <span class="tag">Jupyter</span>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2>Featured Projects</h2>
+  <h2>Data Science Projects</h2>
   <div class="grid">
 
     <div class="card">
-      <h3>PathCoder</h3>
+      <img src="assets/projects/pathcoder.png" class="project-img">
+      <h3>PathCoder – Career Recommendation System</h3>
       <p>
-        AI-powered system that predicts suitable career paths and recommends skills
-        based on user input. Built using Random Forest with explainable outputs.
+        Machine learning system that predicts job roles and recommends
+        skills using Random Forest with explainable outputs.
       </p>
       <span class="tag">Machine Learning</span>
       <span class="tag">Recommendation</span>
@@ -187,10 +177,32 @@
     </div>
 
     <div class="card">
+      <img src="assets/projects/sentiment.png" class="project-img">
+      <h3>Stock Market Sentiment Analysis</h3>
+      <p>
+        NLP-based sentiment analysis on financial news using BERT
+        to analyze market sentiment impact.
+      </p>
+      <span class="tag">NLP</span>
+      <span class="tag">BERT</span>
+      <span class="tag">Transformers</span>
+      <br><br>
+      <a href="https://github.com/mohamedbadry/stock-sentiment-analysis">View Project →</a>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>Data Analysis Projects</h2>
+  <div class="grid">
+
+    <div class="card">
+      <img src="assets/projects/job-market.png" class="project-img">
       <h3>Job Market Analysis (Wuzzuf)</h3>
       <p>
-        End-to-end job market analysis identifying in-demand roles, skills,
-        and trends using Python, SQL, and Power BI dashboards.
+        End-to-end analysis of job market data to identify in-demand roles,
+        required skills, and hiring trends using Python, SQL, and Power BI.
       </p>
       <span class="tag">Data Analysis</span>
       <span class="tag">Power BI</span>
@@ -200,16 +212,17 @@
     </div>
 
     <div class="card">
-      <h3>Stock Market Sentiment Analysis</h3>
+      <img src="assets/projects/maintenance.png" class="project-img">
+      <h3>Predictive Maintenance – NASA Dataset</h3>
       <p>
-        NLP-based sentiment analysis on financial news using BERT
-        to study market sentiment impact.
+        Time-series analysis and failure prediction using NASA
+        Turbofan Engine sensor data.
       </p>
-      <span class="tag">NLP</span>
-      <span class="tag">BERT</span>
-      <span class="tag">Transformers</span>
+      <span class="tag">Time Series</span>
+      <span class="tag">Prediction</span>
+      <span class="tag">Python</span>
       <br><br>
-      <a href="https://github.com/mohamedbadry/stock-sentiment-analysis">View Project →</a>
+      <a href="https://github.com/mohamedbadry/predictive-maintenance">View Project →</a>
     </div>
 
   </div>
